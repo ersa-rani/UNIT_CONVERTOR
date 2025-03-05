@@ -26,7 +26,8 @@ Edit
 streamlit run app.py
 🖥 UI Preview
 
-![Screenshot (86)](https://github.com/user-attachments/assets/78a7b66a-ce60-469b-a21e-19ee0329e7be)
+![image](https://github.com/user-attachments/assets/f779194f-be80-4f21-96da-06ba66cd2c0f)
+
 
 
 💡 How It Works
