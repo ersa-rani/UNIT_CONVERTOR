@@ -43,3 +43,7 @@ st.divider()
 st.markdown(f"""
     <h3 style='text-align: center; color: #2196F3;'>Result: <span style='color: #FF5722;'>{result}</span></h3>
 """, unsafe_allow_html=True)
+
+# Refresh Button
+if st.button("🔄 Refresh"):
+    st.experimental_rerun()
