@@ -1,11 +1,12 @@
 🔄 Streamlit Unit Converter
-A simple and elegant unit converter built with Streamlit. This app allows users to convert between length, weight, and temperature units easily.
+A simple and elegant unit converter built with Streamlit, allowing users to convert between length, weight, and temperature units easily.
 
 🚀 Features
 ✅ Supports Length, Weight, and Temperature Conversions
+✅ Real-time Conversion – No need to press a button!
 ✅ Modern UI with Styled Headers and Dividers
-✅ Real-time Conversion Without a Button Click
 ✅ Error Handling for Unsupported Conversions
+✅ 🔄 Refresh Button – Clears all inputs and starts a new conversion
 📌 Supported Conversions
 Category	From → To
 Length	Meters ↔ Kilometers
@@ -25,13 +26,11 @@ Copy
 Edit
 streamlit run app.py
 🖥 UI Preview
-
-![image](https://github.com/user-attachments/assets/f779194f-be80-4f21-96da-06ba66cd2c0f)
-
-
+![Screenshot (89)](https://github.com/user-attachments/assets/cc949c5d-d70a-4b23-baf5-99edb98a7a33)
 
 💡 How It Works
 Enter a value.
 Select the unit to convert from.
 Select the unit to convert to.
 View the result instantly!
+Need a fresh start? Click the 🔄 Refresh button!
