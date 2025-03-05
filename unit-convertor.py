@@ -28,14 +28,17 @@ st.markdown("""
 
 st.divider()
 
+if "reset" not in st.session_state:
+    st.session_state.reset = False
+
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    value = st.number_input("Enter the value:", min_value=0.0, step=0.1, format="%.2f")
-    unit_from = st.selectbox("Convert from:", ["meters", "kilometers", "grams", "kilograms", "celsius", "fahrenheit"])
+    value = st.number_input("Enter the value:", min_value=0.0, step=0.1, format="%.2f", key="value" if not st.session_state.reset else "value_reset")
+    unit_from = st.selectbox("Convert from:", ["meters", "kilometers", "grams", "kilograms", "celsius", "fahrenheit"], key="unit_from" if not st.session_state.reset else "unit_from_reset")
 
 with col2:
-    unit_to = st.selectbox("Convert to:", ["meters", "kilometers", "grams", "kilograms", "celsius", "fahrenheit"])
+    unit_to = st.selectbox("Convert to:", ["meters", "kilometers", "grams", "kilograms", "celsius", "fahrenheit"], key="unit_to" if not st.session_state.reset else "unit_to_reset")
     result = convert_units(value, unit_from, unit_to)
 
 st.divider()
@@ -46,4 +49,5 @@ st.markdown(f"""
 
 # Refresh Button
 if st.button("🔄 Refresh"):
-    st.experimental_rerun()
+    st.session_state.reset = True
+    st.rerun()
